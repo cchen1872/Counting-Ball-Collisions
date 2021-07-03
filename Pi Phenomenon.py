@@ -25,10 +25,9 @@ def run():
     m2 = canvas.create_rectangle(250,220,300,270,fill = 'lightgrey')
     m1_t = canvas.create_text(115,255,text = '1 kg',fill = 'white')
     m2_t = canvas.create_text(275,255,text = ('10^'+ str(int(math.log10(m[0]))) + ' kg'),fill = 'black')
-    v[0] = 0
-    v[1] = -0.05
-    k[0] = m[0] * v[1]** 2
-    k[1] = m[0] * v[1]
+    v = [0,-0.05];
+    k = [m[0] * v[1]** 2,m[0] * v[1]]
+
     counter[0] = 0
     counter_text[0] = canvas.create_text(200,100,text = counter[0],fill = 'white', font = ('Comic Sans MS',40))
     print(m[0])
